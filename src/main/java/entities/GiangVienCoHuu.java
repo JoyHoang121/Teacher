@@ -6,7 +6,6 @@ public class GiangVienCoHuu extends GiangVien {
     private int Luong, soGioDayToiThieu;
 
 
-
     public GiangVienCoHuu(String tenGV, String email, String diaChi, String soDienThoai, int soGioGiangDay, int soGioQuyDinh, int luong) {
         super(tenGV, email, diaChi, soDienThoai, soGioGiangDay);
         this.Luong = luong;
@@ -30,7 +29,9 @@ public class GiangVienCoHuu extends GiangVien {
     public int tinhLuong() {
         int luong = 0;
         if (this.soGioGiangDay > this.soGioDayToiThieu) {
-            luong = (getSoGioGiangDay() - this.soGioDayToiThieu) * 200000 + this.Luong;
+            luong = (this.soGioGiangDay - this.soGioDayToiThieu) * 200000 + this.Luong;
+        } else {
+            luong = this.Luong;
         }
         return luong;
     }
