@@ -43,7 +43,7 @@ public class App {
         System.out.println("Danh sách các giảng viên của trường");
         for (GiangVien gv1 : giangViens) {
             System.out.println(gv1);
-            luong = gv1.Luong();
+            luong = gv1.tinhLuong();
             tongLuong += luong;
             System.out.println(" lương phải trả: " + luong);
         }
@@ -64,8 +64,8 @@ public class App {
         int maxLuong = 0;
         String tenGV = "";
         for (GiangVien giangVien : giangViens) {
-            if (giangVien.Luong() > maxLuong) {
-                maxLuong = giangVien.Luong();
+            if (giangVien.tinhLuong() > maxLuong) {
+                maxLuong = giangVien.tinhLuong();
                 tenGV = giangVien.getTenGV();
             }
 

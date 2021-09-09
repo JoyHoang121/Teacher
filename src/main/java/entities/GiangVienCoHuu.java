@@ -27,7 +27,7 @@ public class GiangVienCoHuu extends GiangVien {
     }
 
     @Override
-    public int Luong() {
+    public int tinhLuong() {
         int luong = 0;
         if (this.soGioGiangDay > this.soGioDayToiThieu) {
             luong = (getSoGioGiangDay() - this.soGioDayToiThieu) * 200000 + this.Luong;

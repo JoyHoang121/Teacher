@@ -62,7 +62,7 @@ public class GiangVien {
         return sb.toString();
     }
 
-    public int Luong() {
+    public int tinhLuong() {
         return 0;
     }
 }
