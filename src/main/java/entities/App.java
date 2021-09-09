@@ -51,13 +51,18 @@ public class App {
         System.out.println("-----------------------");
 
         System.out.println("Danh sách giảng viên Cơ Hữu: ");
-        for (GiangVienCoHuu gvch : giangVienCH) {
-            System.out.println(gvch);
+        for (GiangVien gv1 : giangViens)  {
+            if(gv1 instanceof GiangVienCoHuu)
+            System.out.println(gv1);
         }
         System.out.println("-----------------------");
         System.out.println("Danh sách giảng viên Thỉnh Giảng: ");
-        for (GiangVienThinhGiang gvtg : giangVienTG) {
-            System.out.println(gvtg);
+//        for (GiangVienThinhGiang gvtg : giangVienTG) {
+//            System.out.println(gvtg);
+//        }
+        for (GiangVien gv1 : giangViens)  {
+            if(gv1 instanceof GiangVienThinhGiang)
+                System.out.println(gv1);
         }
 
         System.out.println("-----------------------");
