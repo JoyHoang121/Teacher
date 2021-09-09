@@ -3,7 +3,8 @@ package entities;
 import java.util.Scanner;
 
 public class GiangVienCoHuu extends GiangVien {
-    private int Luong;
+    private int Luong, soGioDayToiThieu;
+
 
 
     public GiangVienCoHuu(String tenGV, String email, String diaChi, String soDienThoai, int soGioGiangDay, int soGioQuyDinh, int luong) {
@@ -19,6 +20,8 @@ public class GiangVienCoHuu extends GiangVien {
         Scanner sc = new Scanner(System.in);
         System.out.println("Mời nhập lương thỏa thuận");
         this.Luong = sc.nextInt();
+        System.out.println("Mời nhập số giờ dạy tối thiểu");
+        this.soGioDayToiThieu = sc.nextInt();
 
 
     }
@@ -26,8 +29,8 @@ public class GiangVienCoHuu extends GiangVien {
     @Override
     public int Luong() {
         int luong = 0;
-        if (this.soGioGiangDay > 40) {
-            luong = (getSoGioGiangDay() - 40) * 200000 + this.Luong;
+        if (this.soGioGiangDay > this.soGioDayToiThieu) {
+            luong = (getSoGioGiangDay() - this.soGioDayToiThieu) * 200000 + this.Luong;
         }
         return luong;
     }
