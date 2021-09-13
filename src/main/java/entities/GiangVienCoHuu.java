@@ -26,6 +26,15 @@ public class GiangVienCoHuu extends GiangVien {
     }
 
     @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("GiangVienCoHuu: ").append("\n");
+        super.getGiangVien(sb);
+        sb.append("Luong: ").append(Luong).append("\n");
+        sb.append("soGioDayToiThieu: ").append(soGioDayToiThieu);
+        return sb.toString();
+    }
+
+    @Override
     public int tinhLuong() {
         int luong = 0;
         if (this.soGioGiangDay > this.soGioDayToiThieu) {

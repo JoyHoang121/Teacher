@@ -53,13 +53,16 @@ public class GiangVien {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Giang Vien: ").append("\n");
+        getGiangVien(sb);
+        return sb.toString();
+    }
+
+    protected void getGiangVien(StringBuffer sb){
         sb.append(" Tên Giang viên: ").append(tenGV).append("\n");
         sb.append(" Email: ").append(Email).append("\n");
         sb.append(" diaChi: ").append(diaChi).append("\n");
         sb.append(" soDienThoai: ").append(soDienThoai).append("\n");
-        sb.append(" soGioGiangDay: ").append(soGioGiangDay);
-
-        return sb.toString();
+        sb.append(" soGioGiangDay: ").append(soGioGiangDay).append("\n");
     }
 
     public int tinhLuong() {

@@ -11,35 +11,37 @@ public class App {
         ArrayList<GiangVien> giangViens = new ArrayList<>();
         ArrayList<GiangVienCoHuu> giangVienCH = new ArrayList<>();
         ArrayList<GiangVienThinhGiang> giangVienTG = new ArrayList<>();
-        int soGV, choose, tongLuong = 0, luong = 0;
+        int soGV, typeGV, tongLuong = 0, luong = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Mời nhập số lượng giảng viên của trường");
         soGV = sc.nextInt();
         for (int i = 0; i < soGV; i++) {
             System.out.println("Nhập thông tin giảng viên thứ 1: " + (i + 1) + ":");
-            do {
+            //do {
                 System.out.println("Mời nhập loại giảng viên (1- Giang Vien Cơ Hữu, 2 - Giang Viên thỉnh giảng");
-                choose = sc.nextInt();
-                switch (choose) {
+                typeGV = sc.nextInt();
+                switch (typeGV) {
                     case 1:
                         GiangVienCoHuu giangVienCoHuu = new GiangVienCoHuu();
                         giangVienCoHuu.inputThongTinGV();
                         giangViens.add(giangVienCoHuu);
-                        giangVienCH.add(giangVienCoHuu);
+                       // giangVienCH.add(giangVienCoHuu);
                         break;
                     case 2:
                         GiangVienThinhGiang giangVienThinhGiang = new GiangVienThinhGiang();
                         giangVienThinhGiang.inputThongTinGV();
                         giangViens.add(giangVienThinhGiang);
-                        giangVienTG.add(giangVienThinhGiang);
+                      //  giangVienTG.add(giangVienThinhGiang);
                         break;
                     default:
                         System.out.println("Chọn không hợp lệ");
                         break;
                 }
 
-            } while (choose < 1 || choose > 3);
+          //  } while (typeGV < 1 || typeGV > 3);
         }
+
+
         System.out.println("Danh sách các giảng viên của trường");
         for (GiangVien gv1 : giangViens) {
             System.out.println(gv1);

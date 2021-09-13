@@ -21,6 +21,14 @@ public class GiangVienThinhGiang extends GiangVien {
     }
 
     @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("GiangVienThinhGiang: ").append("\n");;
+        super.getGiangVien(sb);
+        sb.append("coQuanLamViec: ").append(coQuanLamViec).append("\n");
+        return sb.toString();
+    }
+
+    @Override
     public void inputThongTinGV() {
         super.inputThongTinGV();
         System.out.println("Mời nhập cơ quan làm viêc");
