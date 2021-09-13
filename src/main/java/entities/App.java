@@ -77,7 +77,7 @@ public class App {
             }
 
         }
-        System.out.println("Giang vien co luong cao nhất: " +  tenGV  + " Luong: " + maxLuong);
+        System.out.println("Giang vien co luong cao nhất là giảng viên " +  tenGV  + " với Lương: " + maxLuong);
     }
 }
 

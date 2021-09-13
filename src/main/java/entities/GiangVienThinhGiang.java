@@ -15,16 +15,11 @@ public class GiangVienThinhGiang extends GiangVien {
     public GiangVienThinhGiang() {
     }
 
-
-    public String getCoQuanLamViec() {
-        return coQuanLamViec;
-    }
-
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("GiangVienThinhGiang: ").append("\n");;
         super.getGiangVien(sb);
-        sb.append("coQuanLamViec: ").append(coQuanLamViec).append("\n");
+        sb.append(" coQuanLamViec: ").append(coQuanLamViec).append("\n");
         return sb.toString();
     }
 

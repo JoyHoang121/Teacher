@@ -29,8 +29,8 @@ public class GiangVienCoHuu extends GiangVien {
     public String toString() {
         final StringBuffer sb = new StringBuffer("GiangVienCoHuu: ").append("\n");
         super.getGiangVien(sb);
-        sb.append("Luong: ").append(Luong).append("\n");
-        sb.append("soGioDayToiThieu: ").append(soGioDayToiThieu);
+        sb.append(" Luong: ").append(Luong).append("\n");
+        sb.append(" soGioDayToiThieu: ").append(soGioDayToiThieu);
         return sb.toString();
     }
 
